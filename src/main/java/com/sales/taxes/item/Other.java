@@ -18,8 +18,7 @@ public class Other extends AbstractItem implements Item{
 
 	@Override
 	public Item checkout(ItemCheckout handler) {
-		// TODO Auto-generated method stub
-		return null;
+		return handler.checkout(this);
 	}
 	
 	

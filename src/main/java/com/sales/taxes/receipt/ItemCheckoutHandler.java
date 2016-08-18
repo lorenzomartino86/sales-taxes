@@ -12,10 +12,13 @@ import com.sales.taxes.item.Other;
 
 public class ItemCheckoutHandler implements ItemCheckout{
 
+	private Receipt receipt = new Receipt();
+	
 	@Override
 	public Item checkout(Book book) {
 		if (book.getOrigin().equals(Origin.IMPORTED))
 			book.addTax(applyImportedTax(book.getNetPrice()));
+		receipt.addItem(book);
 		return book;
 	}
 
@@ -23,6 +26,7 @@ public class ItemCheckoutHandler implements ItemCheckout{
 	public Item checkout(Food food) {
 		if(food.getOrigin().equals(Origin.IMPORTED))
 			food.addTax(applyImportedTax(food.getNetPrice()));
+		receipt.addItem(food);
 		return food;
 	}
 
@@ -30,6 +34,7 @@ public class ItemCheckoutHandler implements ItemCheckout{
 	public Item checkout(Medical medical) {
 		if (medical.getOrigin().equals(Origin.IMPORTED))
 			medical.addTax(applyImportedTax(medical.getNetPrice()));
+		receipt.addItem(medical);
 		return medical;
 	}
 
@@ -37,6 +42,7 @@ public class ItemCheckoutHandler implements ItemCheckout{
 	public Item checkout(Other other) {
 		if (other.getOrigin().equals(Origin.IMPORTED))
 			other.addTax(other.getNetPrice());
+		receipt.addItem(other);
 		return other;
 	}
 
@@ -52,6 +58,11 @@ public class ItemCheckoutHandler implements ItemCheckout{
 	
 	private float roundTax(float taxAmount){
 		return (float) Math.ceil(taxAmount / BASE_OF_ROUND) * BASE_OF_ROUND;
+	}
+
+	@Override
+	public Receipt getReceipt() {
+		return receipt;
 	}
 
 }

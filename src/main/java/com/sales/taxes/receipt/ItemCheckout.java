@@ -15,5 +15,7 @@ public interface ItemCheckout {
 	
 	public float applyBasicTax(float price);
 	public float applyImportedTax(float price);	
+	
+	public Receipt getReceipt();
 
 }
