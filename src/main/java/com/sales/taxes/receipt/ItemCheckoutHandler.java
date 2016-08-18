@@ -40,8 +40,9 @@ public class ItemCheckoutHandler implements ItemCheckout{
 
 	@Override
 	public Item checkout(Other other) {
+		other.addTax(applyBasicTax(other.getNetPrice()));
 		if (other.getOrigin().equals(Origin.IMPORTED))
-			other.addTax(other.getNetPrice());
+			other.addTax(applyImportedTax(other.getNetPrice()));
 		receipt.addItem(other);
 		return other;
 	}
