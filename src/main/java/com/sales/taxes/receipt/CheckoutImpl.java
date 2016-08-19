@@ -10,7 +10,7 @@ import com.sales.taxes.item.Item;
 import com.sales.taxes.item.Medical;
 import com.sales.taxes.item.Other;
 
-public class ItemCheckoutHandler implements ItemCheckout{
+public class CheckoutImpl implements Checkout{
 
 	private Receipt receipt = new Receipt();
 	

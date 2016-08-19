@@ -50,6 +50,7 @@ public abstract class AbstractBuilder {
 			return qty;
 		}
 
+		@SuppressWarnings("unchecked")
 		public T build() throws InstantiationException, IllegalAccessException, IllegalArgumentException,
 				InvocationTargetException, NoSuchMethodException, SecurityException {
 			return (T) clazz.getDeclaredConstructor(ItemBuilder.class).newInstance(this);

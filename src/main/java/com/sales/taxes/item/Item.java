@@ -1,7 +1,7 @@
 package com.sales.taxes.item;
 
 import com.sales.taxes.enums.Origin;
-import com.sales.taxes.receipt.ItemCheckout;
+import com.sales.taxes.receipt.Checkout;
 
 public interface Item {
 
@@ -19,6 +19,6 @@ public interface Item {
 	
 	public void addTax(float taxAmount);
 	
-	public Item checkout(ItemCheckout handler);
+	public Item checkout(Checkout handler);
 	
 }

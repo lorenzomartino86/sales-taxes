@@ -6,7 +6,7 @@ import com.sales.taxes.item.Item;
 import com.sales.taxes.item.Medical;
 import com.sales.taxes.item.Other;
 
-public interface ItemCheckout {
+public interface Checkout {
 	
 	public Item checkout(Book book);
 	public Item checkout(Food food);

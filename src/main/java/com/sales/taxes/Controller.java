@@ -3,12 +3,12 @@ package com.sales.taxes;
 import java.util.List;
 
 import com.sales.taxes.item.Item;
-import com.sales.taxes.receipt.ItemCheckout;
-import com.sales.taxes.receipt.ItemCheckoutHandler;
+import com.sales.taxes.receipt.Checkout;
+import com.sales.taxes.receipt.CheckoutImpl;
 import com.sales.taxes.receipt.Receipt;
 
 
-public class SalesController {
+public class Controller {
 	public void generateAndPrintReceipt(List<Item> itemList){
 		System.out.println("Input:");
 		itemList.forEach(r -> {
@@ -21,7 +21,7 @@ public class SalesController {
 	}
 	
 	public Receipt generateOverallReceipt(List<Item> itemList){
-		ItemCheckout handler = new ItemCheckoutHandler();
+		Checkout handler = new CheckoutImpl();
 		itemList.forEach( item -> item.checkout(handler));	
 		return handler.getReceipt();
 	}
