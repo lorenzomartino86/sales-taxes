@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/stonebreakers/SalesTaxes.svg?branch=master)](https://travis-ci.org/stonebreakers/SalesTaxes)
+[![Build Status](https://travis-ci.org/stonebreakers/sales-taxes.svg?branch=master)](https://travis-ci.org/stonebreakers/sales-taxes)
 
 # SalesTaxes
 
