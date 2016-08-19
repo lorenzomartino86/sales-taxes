@@ -4,4 +4,4 @@ jdk:
 script:
   mvn verify
 after_failure:
-    - cat SalesTaxes/target/surefire-reports/*.txt
+    - cat sales-taxes/target/surefire-reports/*.txt
