@@ -11,8 +11,8 @@ public class Food extends AbstractItem implements Item{
 
 	@Override
 	public String toString() {
-		return "Food [getOrigin()=" + getOrigin() + ", getName()=" + getName() + ", getUnitPrice()=" + getUnitPrice()
-				+ ", getNetPrice()=" + getNetPrice() + ", getGrossPrice()=" + getGrossPrice() + ", getQty()=" + getQty()
+		return "Food [origin=" + getOrigin() + ", name=" + getName() + ", unitPrice=" + getUnitPrice()
+				+ ", netPrice=" + getNetPrice() + ", grossPrice=" + getGrossPrice() + ", qty=" + getQty()
 				+ "]";
 	}
 

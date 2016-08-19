@@ -52,7 +52,7 @@
 							</descriptorRefs>
 							<archive>
 								<manifest>
-									<mainClass>com.sales.SalesTaxesApp</mainClass>
+									<mainClass>com.sales.taxes.App</mainClass>
 								</manifest>
 							</archive>
 						</configuration>

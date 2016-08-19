@@ -11,8 +11,8 @@ public class Other extends AbstractItem implements Item{
 
 	@Override
 	public String toString() {
-		return "Other [getOrigin()=" + getOrigin() + ", getName()=" + getName() + ", getUnitPrice()=" + getUnitPrice()
-				+ ", getNetPrice()=" + getNetPrice() + ", getGrossPrice()=" + getGrossPrice() + ", getQty()=" + getQty()
+		return "Other [origin=" + getOrigin() + ", name=" + getName() + ", unitPrice=" + getUnitPrice()
+				+ ", netPrice=" + getNetPrice() + ", grossPrice=" + getGrossPrice() + ", qty=" + getQty()
 				+ "]";
 	}
 

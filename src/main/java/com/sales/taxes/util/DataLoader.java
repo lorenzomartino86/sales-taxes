@@ -39,7 +39,7 @@ public final class DataLoader {
 	public static List<Item> loadHardCodedData3() throws InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException{
 		return new ArrayList<Item> (){
 			{
-			add(new ItemBuilder<Other>(Other.class, Origin.IMPORTED, "impoimported bottle of perfume", 1, 27.99f).build());
+			add(new ItemBuilder<Other>(Other.class, Origin.IMPORTED, "imported bottle of perfume", 1, 27.99f).build());
 			add(new ItemBuilder<Other>(Other.class, Origin.LOCAL, "bottle of perfume", 1, 18.99f).build());
 			add(new ItemBuilder<Medical>(Medical.class, Origin.LOCAL, "packet of headache pills", 1, 9.75f).build());
 			add(new ItemBuilder<Food>(Food.class, Origin.IMPORTED, "imported box of chocolates", 1, 11.25f).build());

@@ -11,8 +11,8 @@ public class Medical extends AbstractItem implements Item{
 
 	@Override
 	public String toString() {
-		return "Medical [getOrigin()=" + getOrigin() + ", getName()=" + getName() + ", getUnitPrice()=" + getUnitPrice()
-				+ ", getNetPrice()=" + getNetPrice() + ", getGrossPrice()=" + getGrossPrice() + ", getQty()=" + getQty()
+		return "Medical [origin=" + getOrigin() + ", name=" + getName() + ", unitPrice=" + getUnitPrice()
+				+ ", netPrice=" + getNetPrice() + ", grossPrice=" + getGrossPrice() + ", qty=" + getQty()
 				+ "]";
 	}
 
