@@ -19,6 +19,14 @@ public class Receipt {
 		this.totalTaxes += (item.getGrossPrice() - item.getNetPrice());
 	}
 	
+	public float getTotalPrice(){
+		return totalPrice;
+	}
+	
+	public float getTotalTaxes(){
+		return totalTaxes;
+	}
+	
 	@Override
 	public String toString(){
 		StringBuilder receipt = new StringBuilder();
