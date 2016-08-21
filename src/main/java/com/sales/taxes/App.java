@@ -1,6 +1,5 @@
 package com.sales.taxes;
 
-import java.lang.reflect.InvocationTargetException;
 import java.security.InvalidParameterException;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
@@ -67,8 +66,7 @@ public class App {
 				controller.generateAndPrintReceipt(DataLoader.loadHardCodedData2());
 				System.out.println("\n");
 				controller.generateAndPrintReceipt(DataLoader.loadHardCodedData3());
-			} catch (InstantiationException | IllegalAccessException | InvocationTargetException
-					| NoSuchMethodException e) {
+			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}		
@@ -83,8 +81,7 @@ public class App {
 			do {				
 				try {
 					itemList.add(DataLoader.loadFromCommandLine());
-				} catch (InstantiationException | IllegalAccessException | IllegalArgumentException
-						| InvocationTargetException | NoSuchMethodException | SecurityException e) {
+				} catch (Exception e) {
 					e.printStackTrace();
 				}
 				

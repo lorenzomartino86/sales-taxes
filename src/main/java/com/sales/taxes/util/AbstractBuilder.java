@@ -51,9 +51,15 @@ public abstract class AbstractBuilder {
 		}
 
 		@SuppressWarnings("unchecked")
-		public T build() throws InstantiationException, IllegalAccessException, IllegalArgumentException,
-				InvocationTargetException, NoSuchMethodException, SecurityException {
-			return (T) clazz.getDeclaredConstructor(ItemBuilder.class).newInstance(this);
+		public T build() throws Exception {
+			T instance = null;
+			try {
+				instance = (T) clazz.getDeclaredConstructor(ItemBuilder.class).newInstance(this);
+			} catch (InstantiationException | IllegalAccessException | IllegalArgumentException
+					| InvocationTargetException | NoSuchMethodException | SecurityException e) {
+				throw new Exception("Expection instantiating pojo", e);
+			}
+			return instance;
 		}
 
 	}

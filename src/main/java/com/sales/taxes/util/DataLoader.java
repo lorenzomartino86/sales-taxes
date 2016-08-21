@@ -1,6 +1,5 @@
 package com.sales.taxes.util;
 
-import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
@@ -17,7 +16,7 @@ import com.sales.taxes.util.AbstractBuilder.ItemBuilder;
 
 public final class DataLoader {
 	
-	public static List<Item> loadHardCodedData1() throws InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException{
+	public static List<Item> loadHardCodedData1() throws Exception {
 		return new ArrayList<Item> (){
 			{
 			add(new ItemBuilder<Book>(Book.class, Origin.LOCAL, "book", 1, 12.49f).build());
@@ -27,7 +26,7 @@ public final class DataLoader {
 		};
 	}
 
-	public static List<Item> loadHardCodedData2() throws InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException{
+	public static List<Item> loadHardCodedData2() throws Exception {
 		return new ArrayList<Item> (){
 			{
 			add(new ItemBuilder<Food>(Food.class, Origin.IMPORTED, "imported box of chocolates", 1, 10.00f).build());
@@ -36,7 +35,7 @@ public final class DataLoader {
 		};
 	}
 
-	public static List<Item> loadHardCodedData3() throws InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException{
+	public static List<Item> loadHardCodedData3() throws Exception {
 		return new ArrayList<Item> (){
 			{
 			add(new ItemBuilder<Other>(Other.class, Origin.IMPORTED, "imported bottle of perfume", 1, 27.99f).build());
@@ -48,7 +47,7 @@ public final class DataLoader {
 	}
 	
 	
-	public static Item loadFromCommandLine() throws InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException{
+	public static Item loadFromCommandLine() throws Exception {
 		String productName = loadProductName();
 		int qty = loadQuantity();
 		float unitPrice = loadUnitPrice();
